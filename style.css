@@ -51,7 +51,51 @@ html, body {
     width: 100%;
     height: 100%;
     border-radius: inherit;
-    background-color: #190b63;
-    background-image: linear-gradient(60deg, #79167c, #301ba3);
-    padding-top: 50px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#result-box {
+    height: 280px;
+    border-radius: 32px 32px 0 0;
+    margin-bottom: 24px;
+    padding: 20px;
+    font-size: 2.5em;
+    color: #ffffff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#keyboard-box {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 12px;
+    padding: 12px 20px 30px;
+}
+
+.item {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    cursor: default;
+}
+
+.item.operand {
+    font-size: 2em;
+    background-color: #cc9b14;
+}
+
+.item[data-id="clear"] {
+    color: #fc1212;
+    background-color: #f0f0f0;
 }
